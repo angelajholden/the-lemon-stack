@@ -1,4 +1,4 @@
-# The Lemon Stack :lemon:
+# :lemon: The Lemon Stack &mdash; Four Page Complete Website
 
 ![HTML](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=flat&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-%231572B6.svg?style=flat&logo=css3&logoColor=white)
@@ -6,7 +6,7 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 [![Watch the Build](https://img.shields.io/badge/YouTube-Watch-blue?logo=youtube)](https://www.youtube.com/playlist?list=[playlist_goes_here])
 
-This is a simple, clean website built with HTML, CSS and vanilla JavaScript. It’s based on a Photoshop mockup called **[Hilltop - PSD Template for Creative Professionals]** — purchased from [Envato/ThemeForest](https://themeforest.net/item/hilltop-psd-template-for-creative-professionals/19520245). The goal of this project is to turn a static design into accessible, modern code — and make it easy for anyone to customize or learn from. It’s mobile responsive and includes a home page, about page, portfolio page and contact page with a working contact form.
+This is a simple, clean website built with HTML, CSS and vanilla JavaScript. It’s based on a Photoshop mockup called **Hilltop - PSD Template for Creative Professionals** — purchased from [Envato/ThemeForest](https://themeforest.net/item/hilltop-psd-template-for-creative-professionals/19520245). The goal of this project is to turn a static design into accessible, modern code — and make it easy for anyone to customize or learn from. It’s mobile responsive and includes a home page, about page, portfolio page and contact page with a working contact form.
 
 _This project is free and open-source, and focused on helping new frontend developers practice HTML, CSS and JavaScript with real-world examples._
 
