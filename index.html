@@ -9,15 +9,20 @@
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="normalize.css" />
 		<link rel="stylesheet" href="style.css" />
+		<script defer src="script.js"></script>
 	</head>
-	<body>
+	<body class>
 		<header class="header">
 			<h1 class="primary_logo">The LemonStack</h1>
-			<button class="open_button menu_button" aria-label="Open Menu" aria-expanded="false" aria-controls="mainNav" type="button"></button>
+			<button class="open_button menu_button" aria-label="Open Menu" aria-expanded="false" aria-controls="mainNav" type="button">
+				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 160h352M80 256h352M80 352h352" /></svg>
+			</button>
 			<nav id="mainNav" class="navigation">
-				<button class="close_button menu_button" type="button" aria-label="Close Menu"></button>
+				<button class="close_button menu_button" type="button" aria-label="Close Menu">
+					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368" /></svg>
+				</button>
 				<ul class="main_nav">
-					<li class="nav_item"><a href="#">Home</a></li>
+					<li class="nav_item"><a class="active" href="#">Home</a></li>
 					<li class="nav_item"><a href="#">Portfolio</a></li>
 					<li class="nav_item"><a href="#">About</a></li>
 					<li class="nav_item"><a href="#">Contact</a></li>
@@ -34,8 +39,8 @@
 					<li class="social_item">
 						<a href="#">
 							<span class="access-hidden">X</span>
-							<svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M9.33349 6.92867L14.5459 1H13.3109L8.78291 6.14671L5.16908 1H1L6.46604 8.78342L1 15H2.235L7.01369 9.56363L10.8309 15H15L9.33349 6.92867ZM7.64142 8.85175L7.08675 8.07621L2.68037 1.91103H4.57759L8.13472 6.88838L8.68705 7.66391L13.3103 14.1334H11.4131L7.64142 8.85175Z" fill="black" />
+							<svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" stroke="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M9.33349 6.92867L14.5459 1H13.3109L8.78291 6.14671L5.16908 1H1L6.46604 8.78342L1 15H2.235L7.01369 9.56363L10.8309 15H15L9.33349 6.92867ZM7.64142 8.85175L7.08675 8.07621L2.68037 1.91103H4.57759L8.13472 6.88838L8.68705 7.66391L13.3103 14.1334H11.4131L7.64142 8.85175Z" fill="" stroke="none" />
 							</svg>
 						</a>
 					</li>
@@ -79,23 +84,23 @@
 					<p><a class="button" href="#">Get Started</a></p>
 				</div>
 			</section>
-			<section class="section">
+			<section class="section_grid">
 				<div class="wrap">
 					<div class="image_wrap">
-						<figure class="figure">
-							<img src="images/a-perry--fZMc2eNdy0-unsplash.jpg" alt="Lemons hanging from a tree in sunlight." />
-						</figure>
 						<figure class="figure">
 							<img src="images/annie-spratt-60MPOHqcrWU-unsplash.jpg" alt="Lemons hanging on a tree from a distance." />
 						</figure>
 						<figure class="figure">
 							<img src="images/artur-ament-6YoSIAjoYjQ-unsplash.jpg" alt="Lemons on a tree against a bright blue sky." />
 						</figure>
+						<figure class="figure">
+							<img src="images/a-perry--fZMc2eNdy0-unsplash.jpg" alt="Lemons hanging from a tree in sunlight." />
+						</figure>
 					</div>
 					<div class="content_wrap">
 						<h2 class="secondary_heading">Bright. Bold. Unmistakably lemon.</h2>
 						<p>Lemons are a little burst of sunshine — vibrant, bold, and impossible to ignore. Whether it's the zing of fresh juice or the smooth aroma of zest, every lemon brings a spark of energy that cuts through the ordinary. This project is inspired by that same feeling: crisp, clean, and delightfully unexpected.</p>
-						<p><a href="#">Learn More</a></p>
+						<p><a class="button hollow" href="#">Learn More</a></p>
 					</div>
 				</div>
 			</section>
@@ -117,18 +122,18 @@
 				<div class="wrap">
 					<article class="item">
 						<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-							<path d="M350.54,148.68l-26.62-42.06C318.31,100.08,310.62,96,302,96H210c-8.62,0-16.31,4.08-21.92,10.62l-26.62,42.06C155.85,155.23,148.62,160,140,160H80a32,32,0,0,0-32,32V384a32,32,0,0,0,32,32H432a32,32,0,0,0,32-32V192a32,32,0,0,0-32-32H373C364.35,160,356.15,155.23,350.54,148.68Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
-							<circle cx="256" cy="272" r="80" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 32px" />
-							<polyline points="124 158 124 136 100 136 100 158" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
+							<path d="M350.54,148.68l-26.62-42.06C318.31,100.08,310.62,96,302,96H210c-8.62,0-16.31,4.08-21.92,10.62l-26.62,42.06C155.85,155.23,148.62,160,140,160H80a32,32,0,0,0-32,32V384a32,32,0,0,0,32,32H432a32,32,0,0,0,32-32V192a32,32,0,0,0-32-32H373C364.35,160,356.15,155.23,350.54,148.68Z" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
+							<circle cx="256" cy="272" r="80" style="fill: none; stroke-miterlimit: 10; stroke-width: 32px" />
+							<polyline points="124 158 124 136 100 136 100 158" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
 						</svg>
 						<h3 class="tertiary_heading">Design-Obsessed</h3>
 						<p>Every detail matters — like the perfect twist of lemon zest on a summer drink. This design approach is intentional, vibrant, and crafted to create an experience that feels fresh and unforgettable. It's not just about looking good; it's about creating a visual flavor people can't ignore.</p>
 					</article>
 					<article class="item">
 						<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-							<path d="M368,80h64a16,16,0,0,1,16,16v34a46,46,0,0,1-46,46H368" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
-							<path d="M96,80H368a0,0,0,0,1,0,0V272a80,80,0,0,1-80,80H176a80,80,0,0,1-80-80V80A0,0,0,0,1,96,80Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
-							<line x1="64" y1="416" x2="400" y2="416" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
+							<path d="M368,80h64a16,16,0,0,1,16,16v34a46,46,0,0,1-46,46H368" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
+							<path d="M96,80H368a0,0,0,0,1,0,0V272a80,80,0,0,1-80,80H176a80,80,0,0,1-80-80V80A0,0,0,0,1,96,80Z" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
+							<line x1="64" y1="416" x2="400" y2="416" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
 						</svg>
 						<h3 class="tertiary_heading">Building Experience</h3>
 						<p>A great experience should feel like that first sip of perfectly balanced lemonade — refreshing, smooth, and surprisingly delightful. Every layout, interaction, and transition is designed to guide users naturally, blending function and personality in a way that leaves a lasting impression.</p>
@@ -140,15 +145,15 @@
 					</article>
 					<article class="item">
 						<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-							<line x1="368" y1="128" x2="448" y2="128" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
-							<line x1="64" y1="128" x2="304" y2="128" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
-							<line x1="368" y1="384" x2="448" y2="384" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
-							<line x1="64" y1="384" x2="304" y2="384" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
-							<line x1="208" y1="256" x2="448" y2="256" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
-							<line x1="64" y1="256" x2="144" y2="256" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
-							<circle cx="336" cy="128" r="32" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
-							<circle cx="176" cy="256" r="32" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
-							<circle cx="336" cy="384" r="32" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
+							<line x1="368" y1="128" x2="448" y2="128" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
+							<line x1="64" y1="128" x2="304" y2="128" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
+							<line x1="368" y1="384" x2="448" y2="384" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
+							<line x1="64" y1="384" x2="304" y2="384" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
+							<line x1="208" y1="256" x2="448" y2="256" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
+							<line x1="64" y1="256" x2="144" y2="256" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
+							<circle cx="336" cy="128" r="32" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
+							<circle cx="176" cy="256" r="32" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
+							<circle cx="336" cy="384" r="32" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 32px" />
 						</svg>
 						<h3 class="tertiary_heading">High-End Customization</h3>
 						<p>No two lemons are exactly alike — and neither are projects. Every element is tailored to fit your unique flavor, from subtle design tweaks to robust custom features. The result is a polished, personalized experience that stands out like a fresh pop of citrus.</p>
@@ -312,7 +317,7 @@
 								<a href="#">
 									<span class="access-hidden">X</span>
 									<svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M9.33349 6.92867L14.5459 1H13.3109L8.78291 6.14671L5.16908 1H1L6.46604 8.78342L1 15H2.235L7.01369 9.56363L10.8309 15H15L9.33349 6.92867ZM7.64142 8.85175L7.08675 8.07621L2.68037 1.91103H4.57759L8.13472 6.88838L8.68705 7.66391L13.3103 14.1334H11.4131L7.64142 8.85175Z" fill="black" />
+										<path d="M9.33349 6.92867L14.5459 1H13.3109L8.78291 6.14671L5.16908 1H1L6.46604 8.78342L1 15H2.235L7.01369 9.56363L10.8309 15H15L9.33349 6.92867ZM7.64142 8.85175L7.08675 8.07621L2.68037 1.91103H4.57759L8.13472 6.88838L8.68705 7.66391L13.3103 14.1334H11.4131L7.64142 8.85175Z" fill="" />
 									</svg>
 								</a>
 							</li>
