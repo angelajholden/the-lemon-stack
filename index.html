@@ -242,21 +242,31 @@
 							<img src="images/natalie-kinnear-BkuUOofPGkE-unsplash.jpg" alt="Close up of lemon slices." />
 						</figure>
 					</div>
-					<form action="#" class="form">
+					<form method="POST" action="https://formspree.io/f/xblzqkkv" target="_blank" class="form">
+						<input type="hidden" name="page_path" value="" />
+						<input type="hidden" name="page_url" value="" />
+
+						<div aria-hidden="true" class="access-hidden">
+							<label>
+								Leave this field empty.
+								<input type="text" name="_honeypot" autocomplete="off" />
+							</label>
+						</div>
+
 						<label class="access-hidden" for="first">First Name</label>
-						<input id="first" type="text" name="first_name" placeholder="First Name" required />
+						<input id="first" type="text" name="first_name" placeholder="First Name*" required minlength="2" maxlength="50" />
 
 						<label for="last" class="access-hidden">Last Name</label>
-						<input id="last" type="text" name="last_name" placeholder="Last Name" required />
+						<input id="last" type="text" name="last_name" placeholder="Last Name*" required minlength="2" maxlength="50" />
 
 						<label for="email" class="access-hidden">Email</label>
-						<input id="email" type="email" name="email" placeholder="Email" required />
+						<input id="email" type="email" name="email" placeholder="Email*" required />
 
 						<label for="phone" class="access-hidden">Phone Number</label>
 						<input id="phone" type="tel" name="phone_number" placeholder="Phone Number" />
 
 						<label for="message" class="access-hidden">Message</label>
-						<textarea rows="10" name="message" id="message" placeholder="Message"></textarea>
+						<textarea rows="10" name="message" id="message" placeholder="Message*" required minlength="10"></textarea>
 
 						<button class="button" type="submit">Submit</button>
 					</form>
