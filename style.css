@@ -167,6 +167,10 @@ button {
 	width: 1px;
 }
 
+.center {
+	text-align: center;
+}
+
 .green {
 	color: var(--green);
 	font-weight: 600;
@@ -184,7 +188,7 @@ button {
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 2rem 4rem;
+	padding: 1rem 4rem;
 	background-color: rgba(255, 255, 255, 85%);
 	box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 10%);
 	display: flex;
@@ -196,7 +200,7 @@ button {
 
 .primary_logo {
 	margin: 0;
-	font-size: clamp(1rem, 2vw, 1.5rem);
+	font-size: clamp(1.25rem, 2.5vw, 1.5rem);
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 3px;
@@ -215,19 +219,14 @@ button {
 	gap: 2rem;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
 	.header {
-		padding: 0.5rem;
+		position: sticky;
+		padding: 0.5rem 1rem;
 	}
 
 	.main_nav {
 		gap: 1rem;
-	}
-}
-
-@media (max-width: 1024px) {
-	.header {
-		position: sticky;
 	}
 }
 
@@ -276,6 +275,7 @@ button {
 	font-weight: 500;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	color: var(--steel);
 	text-decoration-color: transparent;
 }
 
@@ -283,17 +283,17 @@ button {
 .nav_item a:focus,
 .nav_item a:hover,
 .nav_item a:active {
-	text-decoration-color: var(--blue);
+	text-decoration-color: var(--steel);
 }
 
 .menu_button {
 	display: none;
-	cursor: pointer;
 }
 
 @media (max-width: 1024px) {
 	.menu_button {
 		display: block;
+		cursor: pointer;
 		border-radius: 5px;
 		background-color: transparent;
 		transition: background-color 300ms ease-in-out;
@@ -302,7 +302,18 @@ button {
 	.menu_button:focus,
 	.menu_button:hover,
 	.menu_button:active {
-		background-color: var(--yellow);
+		background-color: var(--steel);
+	}
+
+	.menu_button svg {
+		stroke: var(--steel);
+		transition: stroke 300ms ease-in-out;
+	}
+
+	.menu_button:focus svg,
+	.menu_button:hover svg,
+	.menu_button:active svg {
+		stroke: var(--white);
 	}
 
 	.close_button {
@@ -350,7 +361,7 @@ button {
 	.menu_active .navigation {
 		box-shadow: -1px 0 1px 1px rgba(0, 0, 0, 10%);
 		visibility: visible;
-		transform: translateX(-100%);
+		transform: translateX(-300px);
 	}
 }
 
@@ -726,8 +737,7 @@ button {
 
 /* Form Section */
 .section_content-form {
-	/* aspect-ratio: 2 / 1; */
-	padding: 4rem 0;
+	padding: 0 0 8rem;
 }
 
 .section_content-form .wrap {
@@ -801,7 +811,7 @@ textarea[required]::placeholder {
 
 @media (max-width: 1024px) {
 	.section_content-form {
-		padding: 2rem 0;
+		padding: 0 0 4rem;
 	}
 
 	.section_content-form .wrap {
