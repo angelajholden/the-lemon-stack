@@ -200,11 +200,15 @@ button {
 
 .primary_logo {
 	margin: 0;
-	font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
 	font-weight: 700;
+	font-style: normal;
+	font-size: clamp(1.25rem, 2.5vw, 1.5rem);
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	line-height: 1;
+	color: var(--steel);
 }
 
 .main_nav,
