@@ -82,6 +82,11 @@ h4 {
 	color: var(--steel);
 }
 
+small {
+	display: block;
+	margin: 0 0 1rem;
+}
+
 a {
 	display: inline-block;
 	color: var(--blue);
@@ -160,6 +165,11 @@ button {
 	position: absolute;
 	white-space: nowrap;
 	width: 1px;
+}
+
+.green {
+	color: var(--green);
+	font-weight: 600;
 }
 
 .wrap {
@@ -781,6 +791,12 @@ textarea {
 	margin: 0 0 1.5rem;
 	width: 100%;
 	border: 2px solid var(--gray);
+}
+
+input[required]::placeholder,
+textarea[required]::placeholder {
+	color: var(--green);
+	font-weight: 600;
 }
 
 @media (max-width: 1024px) {
