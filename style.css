@@ -82,6 +82,7 @@ h4 {
 }
 
 a {
+	display: inline-block;
 	color: var(--blue);
 	text-decoration-color: var(--blue);
 	text-underline-offset: 5px;
@@ -95,9 +96,26 @@ a:active {
 	text-decoration-color: transparent;
 }
 
+a + svg {
+	display: inline-block;
+	vertical-align: middle;
+	width: 1.333rem;
+	height: 1.333rem;
+	stroke: var(--blue);
+	transform: translateX(0);
+	transition: transform 300ms ease-in-out;
+}
+
+a:focus + svg,
+a:hover + svg,
+a:active + svg {
+	transform: translateX(10px);
+}
+
 button {
 	padding: 0;
 	border: none;
+	cursor: pointer;
 	background-color: transparent;
 }
 
@@ -453,5 +471,337 @@ button {
 
 	.section_grid .wrap {
 		grid-template-columns: 1fr;
+	}
+}
+
+/* Full Width Cards */
+.full_width-cards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.full_width-cards .card {
+	padding: 4rem;
+	text-align: center;
+	background-color: var(--gray);
+	color: var(--black);
+}
+
+.full_width-cards .card:nth-of-type(2) .tertiary_heading {
+	color: var(--lt-gray);
+}
+
+.full_width-cards .card:nth-of-type(2) {
+	position: relative;
+	background-color: var(--steel);
+	color: var(--lt-gray);
+}
+
+.full_width-cards .card:nth-of-type(2)::before {
+	content: "";
+	display: block;
+	width: calc(100% - 4rem);
+	height: calc(100% - 4rem);
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
+	border: 3px dotted var(--lt-steel);
+	pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+	.full_width-cards {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 600px) {
+	.full_width-cards .card {
+		padding: 2rem;
+	}
+
+	.full_width-cards .card:nth-of-type(2)::before {
+		width: calc(100% - 2rem);
+		height: calc(100% - 2rem);
+		top: 1rem;
+		left: 1rem;
+	}
+}
+
+/* Section Grid Icons */
+.section_grid-icons {
+	padding: 4rem 0;
+	background-color: var(--lt-gray);
+}
+
+.section_grid-icons .wrap {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem;
+}
+
+.section_grid-icons .item:nth-of-type(1) svg {
+	stroke: var(--yellow);
+}
+
+.section_grid-icons .item:nth-of-type(2) svg {
+	stroke: var(--green);
+}
+
+.section_grid-icons .item:nth-of-type(3) svg {
+	fill: var(--blue);
+}
+
+.section_grid-icons .item:nth-of-type(4) svg {
+	stroke: var(--lt-steel);
+	transform: rotate(-90deg);
+}
+
+@media (max-width: 768px) {
+	.section_grid-icons {
+		padding: 2rem 0;
+	}
+
+	.section_grid-icons .wrap {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+}
+
+/* Masonry */
+.masonry {
+	padding: 4rem 0;
+}
+
+.masonry .wrap {
+	text-align: center;
+}
+
+.masonry p {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 3rem 0;
+}
+
+.masonry .grid {
+	columns: 3 auto;
+	gap: 1rem;
+}
+
+.masonry .figure {
+	break-inside: avoid;
+	padding: 0 0 1rem;
+}
+
+@media (max-width: 768px) {
+	.masonry {
+		padding: 2rem 0;
+	}
+
+	.masonry .grid {
+		columns: 2 auto;
+		gap: 0.5rem;
+	}
+
+	.masonry .figure {
+		padding: 0 0 0.5rem;
+	}
+}
+
+/* Full Width Text */
+.full_width-text {
+	position: relative;
+	padding: 4rem;
+	text-align: center;
+	background-color: var(--lt-gray);
+}
+
+.full_width-text::before {
+	content: "";
+	display: block;
+	width: calc(100% - 4rem);
+	height: calc(100% - 4rem);
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
+	border: 3px dotted var(--yellow);
+	pointer-events: none;
+}
+
+.full_width-text .secondary_heading {
+	font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+}
+
+@media (max-width: 768px) {
+	.full_width-text {
+		padding: 2rem;
+	}
+
+	.full_width-text::before {
+		width: calc(100% - 2rem);
+		height: calc(100% - 2rem);
+		top: 1rem;
+		left: 1rem;
+	}
+}
+
+/* Section Grid Posts */
+.section_grid-posts {
+	padding: 4rem 0;
+}
+
+.section_grid-posts .secondary_heading {
+	text-align: center;
+	margin: 1rem 0 3rem;
+}
+
+.section_grid-posts .wrap {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+}
+
+.section_grid-posts .figure {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 1.59 / 1;
+	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 10%);
+}
+
+.section_grid-posts img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center -1px;
+}
+
+.section_grid-posts .category,
+.section_grid-posts .tertiary_heading {
+	text-align: center;
+}
+
+.section_grid-posts .category {
+	margin: 2.5rem 0 1rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 600;
+}
+
+.section_grid-posts .category::after {
+	content: "";
+	display: block;
+	width: 65px;
+	height: 0;
+	margin: 0.5rem auto 1.5rem;
+	border-bottom: 3px solid var(--yellow);
+}
+
+@media (max-width: 960px) {
+	.section_grid-posts {
+		padding: 2rem 0;
+	}
+
+	.section_grid-posts .secondary_heading {
+		margin: 1rem 0 2rem;
+	}
+
+	.section_grid-posts .wrap {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+}
+
+/* Form Section */
+.section_content-form {
+	aspect-ratio: 2 / 1;
+	padding: 4rem 0;
+}
+
+.section_content-form .wrap {
+	width: 107rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.bg_image-wrap {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 0;
+}
+
+.bg_image-wrap .figure {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.bg_image-wrap img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.bg_image-wrap .content_wrap {
+	position: relative;
+	text-align: center;
+	padding: 4rem;
+	background-color: rgba(255, 255, 255, 65%);
+}
+
+.bg_image-wrap .content_wrap::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: calc(100% - 2rem);
+	height: calc(100% - 2rem);
+	top: 1rem;
+	left: 1rem;
+	border: 3px dotted var(--lt-steel);
+}
+
+/* Form Container */
+.form {
+	padding: 4rem;
+	background-color: var(--lt-gray);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	display: block;
+	padding: 1rem;
+	margin: 0 0 1.5rem;
+	width: 100%;
+	border: 2px solid var(--gray);
+}
+
+@media (max-width: 1024px) {
+	.section_content-form {
+		padding: 2rem 0;
+	}
+
+	.section_content-form .wrap {
+		grid-template-columns: 1fr;
+	}
+
+	.bg_image-wrap .content_wrap {
+		margin: 3rem;
+		padding: 3rem;
+	}
+
+	.form {
+		padding: 1.5rem;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"],
+	textarea {
+		margin: 0 0 1rem;
 	}
 }
