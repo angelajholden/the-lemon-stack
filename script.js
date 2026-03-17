@@ -1,52 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
-	const date = document.getElementById("date");
-	const year = new Date().getFullYear();
-	if (date) {
-		date.textContent = year;
-	}
-
-	const body = document.querySelector("body");
-	const buttons = document.querySelectorAll(".menu_button");
-	const open = document.querySelector(".open_button");
-
-	buttons.forEach((button) => {
-		button.addEventListener("click", () => {
-			const isActive = body.classList.toggle("menu_active");
-			if (isActive) {
-				open.setAttribute("aria-expanded", "true");
-			} else {
-				open.setAttribute("aria-expanded", "false");
-			}
+	const e = document.getElementById("date"),
+		t = new Date().getFullYear();
+	e && (e.textContent = t);
+	const n = document.querySelector("body"),
+		a = document.querySelectorAll(".menu_button"),
+		o = document.querySelector(".open_button");
+	a.forEach((e) => {
+		e.addEventListener("click", () => {
+			n.classList.toggle("menu_active") ? o.setAttribute("aria-expanded", "true") : o.setAttribute("aria-expanded", "false");
 		});
-	});
-
-	document.addEventListener("keydown", (e) => {
-		if (e.key === "Escape" && body.classList.contains("menu_active")) {
-			body.classList.remove("menu_active");
-			open.setAttribute("aria-expanded", "false");
-		}
-	});
-
-	const form = document.querySelector("form");
-	if (form) {
-		const url = form.querySelector('input[name="page_url"]');
-		if (url) url.value = window.location.href;
-
-		const path = form.querySelector('input[name="page_path"]');
-		if (path) path.value = window.location.pathname;
-
-		form.addEventListener("submit", (e) => {
-			if (!form.checkValidity()) {
-				e.preventDefault();
-				form.reportValidity();
-				return;
-			}
-
-			const btn = form.querySelector('button[type="submit"]');
-			if (btn) {
-				btn.disabled = true;
-				btn.textContent = "Sending...";
-			}
+	}),
+		document.addEventListener("keydown", (e) => {
+			"Escape" === e.key && n.classList.contains("menu_active") && (n.classList.remove("menu_active"), o.setAttribute("aria-expanded", "false"));
 		});
+	const r = document.querySelector("form");
+	if (r) {
+		const e = r.querySelector('input[name="page_url"]');
+		e && (e.value = window.location.href);
+		const t = r.querySelector('input[name="page_path"]');
+		t && (t.value = window.location.pathname),
+			r.addEventListener("submit", (e) => {
+				if (!r.checkValidity()) return e.preventDefault(), void r.reportValidity();
+				const t = r.querySelector('button[type="submit"]');
+				t && ((t.disabled = !0), (t.textContent = "Sending..."));
+			});
 	}
 });
